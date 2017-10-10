@@ -27,7 +27,9 @@ public class ViewPagerFragment extends Fragment {
             default:
                 view = inflater.inflate(R.layout.fragment_item2, container, false);
                 ListView listView = (ListView) view.findViewById(R.id.listview);
-                listView.addFooterView(inflater.inflate(R.layout.fragment_title, null));
+                ListViewAdapter listViewAdapter=new ListViewAdapter(inflater.getContext());
+                listView.setAdapter(listViewAdapter);
+               // listView.addFooterView(inflater.inflate(R.layout.fragment_title, null));
                 break;
         }
 
