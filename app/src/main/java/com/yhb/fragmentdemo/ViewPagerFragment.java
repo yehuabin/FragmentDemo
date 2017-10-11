@@ -10,6 +10,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 public class ViewPagerFragment extends Fragment {
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class ViewPagerFragment extends Fragment {
             default:
                 view = inflater.inflate(R.layout.fragment_item2, container, false);
                 ListView listView = (ListView) view.findViewById(R.id.listview);
-                ListViewAdapter listViewAdapter=new ListViewAdapter(inflater.getContext());
+                ListViewAdapter listViewAdapter=new ListViewAdapter(getActivity().getBaseContext());
                 listView.setAdapter(listViewAdapter);
                // listView.addFooterView(inflater.inflate(R.layout.fragment_title, null));
                 break;
