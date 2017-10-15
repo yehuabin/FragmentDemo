@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
-    private RecycleViewAdapter adapter;
+    private FootViewAdapter adapter;
     private SwipeRefreshLayout swipeRefreshLayout;
     private int lastVisibleItem;
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(OrientationHelper.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        adapter = new RecycleViewAdapter(this);
+        adapter = new FootViewAdapter(this);
         recyclerView.setAdapter(adapter);
 
         swipeRefreshLayout= (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
